@@ -23,10 +23,8 @@ console.log(solveEquation());
 
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  let p = percent / (12 * 100);
-  let n = countMonths;
-  let s = amount - contribution;
-  let payment = s * (p + (p / (((1 + p ** n)-1))))
+  let percentMonth = percent / (12 * 100);
+  let sum = amount - contribution;
+  let payment = sum * (percentMonth + (percentMonth / (((1 + percentMonth) ** countMonths)-1)));
+  return Number(payment.toFixed(2));
 }
-
-console.log(calculateTotalMortgage(percent, contribution, amount, countMonths) , payment);
