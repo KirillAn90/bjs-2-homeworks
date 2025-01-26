@@ -9,7 +9,7 @@ function getArrayParams(...arr) {
 	return {
 		min: min,
 		max: max,
-		avg: Number(avg.toFixed(1))
+		avg: Number(avg.toFixed(2))
 	};
 }
 
