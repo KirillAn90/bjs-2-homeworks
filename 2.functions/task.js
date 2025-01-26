@@ -33,7 +33,19 @@ function summElementsWorker(...arr) {
 }
 
 function differenceMaxMinWorker(...arr) {
+	let max = -Infinity;
+	let min = Infinity;
 
+	for (let num of arr) {
+		if (num > max) {
+			max = num;
+		}
+		if (num < min) {
+			min = num;
+		}
+	}
+
+	return max - min;
 }
 
 function differenceEvenOddWorker(...arr) {
