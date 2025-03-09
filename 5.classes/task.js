@@ -45,21 +45,21 @@ class PrintEditionItem {
    class NovelBook extends Book {
     constructor(name, releaseDate, pagesCount, author) {
     super(name, releaseDate, pagesCount, author);
-    this.type = "novel";
+    this.type = "novelBook";
     }
    }
    
    class FantasticBook extends Book {
     constructor(name, releaseDate, pagesCount, author) {
     super(name, releaseDate, pagesCount, author);
-    this.type = "fantastic";
+    this.type = "fantasticBook";
     }
    }
    
    class DetectiveBook extends Book {
     constructor(name, releaseDate, pagesCount, author) {
     super(name, releaseDate, pagesCount, author);
-    this.type = "detective";
+    this.type = "detectiveBook";
     }
    }
 
@@ -103,9 +103,9 @@ const detective = new DetectiveBook("Убийство в Восточном эк
 const fantastic = new FantasticBook("451 градус по Фаренгейту", 1953, 272, "Рэй Брэдбери");
 
 library.addBook(magazine);
-library.addBook(novel);
-library.addBook(detective);
-library.addBook(fantastic);
+library.addBook(NovelBook);
+library.addBook(DetectiveBook);
+library.addBook(FantasticBook);
 
 const book1919 = library.findBookBy("releaseDate", 1919);
 if (!book1919) {
