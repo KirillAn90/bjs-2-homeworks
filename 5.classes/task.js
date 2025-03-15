@@ -9,7 +9,6 @@ class PrintEditionItem {
 
 	fix() {
 		this._state *= 1.5;
-		this._state = Math.min(this._state, 100);
 	}
 
 	set state(newState) {
@@ -94,25 +93,3 @@ class Library {
 		return null;
 	}
 }
-
-const library = new Library("Центральная библиотека");
-
-const magazine = new Magazine("Наука и жизнь", 2023, 120);
-const novel = new NovelBook("Война и мир", 1869, 1225, "Л.Н. Толстой");
-const detective = new DetectiveBook("Убийство в Восточном экспрессе", 1934, 320, "Агата Кристи");
-const fantastic = new FantasticBook("451 градус по Фаренгейту", 1953, 272, "Рэй Брэдбери");
-
-library.addBook(magazine);
-library.addBook(NovelBook);
-library.addBook(DetectiveBook);
-library.addBook(FantasticBook);
-
-const book1919 = library.findBookBy("releaseDate", 1919);
-if (!book1919) {
-	const newBook = new Book("Название книги", 1919, 250, "Неизвестный автор");
-	library.addBook(newBook);
-}
-
-const issuedBook = library.giveBookByName("Война и мир");
-
-issuedBook.state = 20;
