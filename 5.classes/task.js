@@ -8,8 +8,8 @@ class PrintEditionItem {
 	}
 
 	fix() {
-		this._state *= 1.5;
-		this._state = Math.min(this._state, 100);
+		this.state *= 1.5;
+		this.state = Math.min(this._state, 100);
 	}
 
 	set state(newState) {
